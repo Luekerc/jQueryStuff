@@ -1,0 +1,71 @@
+#mybox {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	font-family: sans-serif;
+	font-weight: bold;
+	width: 200px;
+	border: 5px solid black;
+	border-radius: 10px;
+	height: 20px;
+	padding: 10px;
+	text-align: center;
+}
+#tooltip-one{
+	position: absolute;
+	z-index: 2;
+	width: 200px;
+	padding: 5px;
+	background-color: #A7A7A7;
+	border: 3px solid black;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	display: none;
+}
+.info {
+	display: block;
+	position: relative;
+	font-family: Arial;
+	width: 200px;
+	padding: 20px 0;
+	margin: 100px auto;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	border: 5px solid black;
+	border-radius: 10px;
+}
+.tooltip-two {
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 120%;
+	width: 100px;
+	padding: 5px;
+	border-radius: 10px;
+	background: #09f;
+	color: #fff;
+	text-transform: none;
+	font-size: 12px;
+	opacity: 0;
+	transform: scaleY(0);
+	transition: all 0.2s ease;
+
+}
+.tooltip-two:after {
+	position: absolute;
+	content: '';
+	left: 45%;
+	bottom: -5px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid #09f;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+
+}
+.info:hover .tooltip-two {
+	opacity: 1;
+	transform: scaleY(1);
+}
