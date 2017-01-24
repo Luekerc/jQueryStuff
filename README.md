@@ -1,0 +1,1 @@
+We have projects at work that use jQuery, this repository gives me a quick refresher so I can hit the ground running when I start work on the tickets the next day.
