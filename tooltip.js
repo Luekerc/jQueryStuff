@@ -1,4 +1,15 @@
 $(document).ready(function(){
+	$(window).scroll(function (event) {
+	    var scroll = $(window).scrollTop();
+	    $(".fixed-text").html(scroll);
+	    if(scroll > 999 && scroll < 1100){
+	    	$(".fixed-position").css({"font-size":"200%", "width":"370px"});
+	    	$(".fixed-text").html("YOU HIT 1000!");
+	    }else{
+	    	$(".fixed-text").html(scroll);
+	    	$(".fixed-position").css({"font-size":"100%", "width":"100px"});
+	    }
+	});
 
 	$("#mybox").hover(function(){
 		$("#tooltip-one").css("display","block");
@@ -18,7 +29,6 @@ $(document).ready(function(){
 	infoElem.each(function(){
 		var self = $(this),
 			selfTooltipText = self.data('tooltip-text');
-		console.log(self.data());
 		if(selfTooltipText) $('<span/>',{class: 'tooltip-two', text: selfTooltipText}).appendTo(self);
 	})
 
